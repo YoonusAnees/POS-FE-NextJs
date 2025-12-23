@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# POS Frontend (Next.js + Tailwind v4) for Spring Boot Backend
 
-## Getting Started
+This is a Next.js (App Router) + TypeScript + Tailwind CSS v4+ frontend for your Spring Boot POS backend.
 
-First, run the development server:
+## Features
+- JWT Login/Register (access + refresh tokens)
+- Auto refresh token with Axios interceptor
+- Role based pages (USER / ADMIN)
+- Products list (pagination + search)
+- Product details + add review
+- Cart (localStorage) + Create Order
+- Track Order by referenceNo
+- Profile (get/update)
+- Admin user management (list/update/delete)
+
+---
+
+## Requirements
+- Node.js 18+ (recommended 20+)
+- Spring Boot backend running at `http://localhost:8080`
+
+---
+
+## 1 Install & Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# POS Frontend (Next.js + Tailwind v4) for Spring Boot Backend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is a Next.js (App Router) + TypeScript + Tailwind CSS v4+ frontend for your Spring Boot POS backend.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
+- JWT Login/Register (access + refresh tokens)
+- Auto refresh token with Axios interceptor
+- Role based pages (USER / ADMIN)
+- Products list (pagination + search)
+- Product details + add review
+- Cart (localStorage) + Create Order
+- Track Order by referenceNo
+- Profile (get/update)
+- Admin user management (list/update/delete)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Requirements
+- Node.js 18+ (recommended 20+)
+- Spring Boot backend running at `http://localhost:8080`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 1) Install & Run
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install
+npm run dev
