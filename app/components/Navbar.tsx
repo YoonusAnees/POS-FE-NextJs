@@ -6,9 +6,11 @@ import { tokenStore } from "../lib/storage";
 
 export default function Navbar() {
   const [role, setRole] = useState<string | null>(null);
+  const [hasToken, setHasToken] = useState(false);
 
   useEffect(() => {
     setRole(tokenStore.getRole());
+    setHasToken(!!tokenStore.getAccess());
   }, []);
 
   const logout = () => {
@@ -23,7 +25,7 @@ export default function Navbar() {
           POS
         </Link>
 
-        <nav className="flex items-center gap-2">
+        <nav className="flex items-center gap-2 text-sm">
           <Link className="rounded-xl px-3 py-2 hover:bg-zinc-100" href="/products">
             Products
           </Link>
@@ -44,12 +46,18 @@ export default function Navbar() {
             Profile
           </Link>
 
-          <button
-            onClick={logout}
-            className="rounded-xl bg-zinc-900 px-3 py-2 text-sm font-semibold text-white hover:bg-zinc-800"
-          >
-            Logout
-          </button>
+          {!hasToken ? (
+            <Link className="rounded-xl bg-zinc-900 px-3 py-2 font-semibold text-white hover:bg-zinc-800" href="/login">
+              Login
+            </Link>
+          ) : (
+            <button
+              onClick={logout}
+              className="rounded-xl bg-zinc-900 px-3 py-2 font-semibold text-white hover:bg-zinc-800"
+            >
+              Logout
+            </button>
+          )}
         </nav>
       </div>
     </header>
